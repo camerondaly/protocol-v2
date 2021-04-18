@@ -13,17 +13,17 @@
 
 # Aave Protocol v2
 
-This repository contains the smart contracts source code and markets configuration for Aave Protocol V2. The repository uses Docker Compose and Hardhat as development enviroment for compilation, testing and deployment tasks.
+This repository contains the smart contracts source code and markets configuration for Aave Protocol V2. The repository uses Docker Compose and Hardhat as its development enviroment for compilation, testing and deployment tasks.
 
 ## What is Aave?
 
-Aave is a decentralized non-custodial liquidity markets protocol where users can participate as depositors or borrowers. Depositors provide liquidity to the market to earn a passive income, while borrowers are able to borrow in an overcollateralized (perpetually) or undercollateralized (one-block liquidity) fashion.
+Aave is a decentralized non-custodial liquidity markets protocol where users can participate as depositors or borrowers. Depositors provide liquidity to the market to earn passive income, while borrowers are able to borrow in an overcollateralized (perpetually) or undercollateralized (one-block liquidity) fashion.
 
 ## Documentation
 
 The documentation of Aave V2 is in the following [Aave V2 documentation](https://docs.aave.com/developers/v/2.0/) link. At the documentation you can learn more about the protocol, see the contract interfaces, integration guides and audits.
 
-For getting the latest contracts addresses, please check the [Deployed contracts](https://docs.aave.com/developers/v/2.0/deployed-contracts/deployed-contracts) page at the documentation to stay up to date.
+For the latest contracts addresses, please check the [Deployed contracts](https://docs.aave.com/developers/v/2.0/deployed-contracts/deployed-contracts) page at the documentation to stay up to date.
 
 A more detailed and technical description of the protocol can be found in this repository, [here](./aave-v2-whitepaper.pdf)
 
@@ -73,9 +73,9 @@ console.log(LendingPoolV2Artifact.abi)
 
 ## Setup
 
-The repository uses Docker Compose to manage sensitive keys and load the configuration. Prior any action like test or deploy, you must run `docker-compose up` to start the `contracts-env` container, and then connect to the container console via `docker-compose exec contracts-env bash`.
+The repository uses Docker Compose to manage sensitive keys and load the configuration. Prior to any actions such as testing or deploying, you must run `docker-compose up` to start the `contracts-env` container, and then run `docker-compose exec contracts-env bash` to connect to the container console.
 
-Follow the next steps to setup the repository:
+Follow these steps to setup the repository:
 
 - Install `docker` and `docker-compose`
 - Create an enviroment file named `.env` and fill the next enviroment variables
@@ -100,7 +100,7 @@ TENDERLY_USERNAME=""
 
 ## Markets configuration
 
-The configurations related with the Aave Markets are located at `markets` directory. You can follow the `IAaveConfiguration` interface to create new Markets configuration or extend the current Aave configuration.
+The configurations related with the Aave Markets are located at the `markets` directory. You can follow the `IAaveConfiguration` interface to create new Markets configurations or to extend the current Aave configuration.
 
 Each market should have his own Market configuration file, and their own set of deployment tasks, using the Aave market config and tasks as a reference.
 
